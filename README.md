@@ -63,9 +63,9 @@ pnpm capture:proof
 
 ## Trial packages and Pages
 
-The public reproduction pins exact npm aliases to `@revolist/rv-pro-trial@2.4.0` and `@revolist/rv-enterprise-trial@2.4.0`; it does not install the main Pro or Enterprise distributions. The Pages workflow uses the repository `GITHUB_TOKEN` with `packages: read`. The repository must therefore have read access to both trial packages.
+The public reproduction pins exact npm aliases to `@revolist/rv-pro-trial@2.4.0` and `@revolist/rv-enterprise-trial@2.4.0`; it does not install the main Pro or Enterprise distributions. The build workflow uses the repository `GITHUB_TOKEN` with `packages: read`. The repository must therefore have read access to both trial packages.
 
-Vite accepts `VITE_BASE_PATH` so the same build runs at the standard project Pages path and at the benchmark hub path. Trusted pushes to `main` deploy the standalone project site; the benchmark hub publishes the same build under `/revogrid-scheduler-review-samples/`.
+Vite accepts `VITE_BASE_PATH` so the benchmark hub can publish this project under `/revogrid-scheduler-review-samples/`. The custom domain belongs to the benchmark hub repository, which checks out this repository, builds it from the frozen trial lockfile, and deploys the resulting subdirectory alongside the existing benchmark.
 
 ## Licensing
 
