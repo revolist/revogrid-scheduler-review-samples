@@ -2,6 +2,8 @@
 
 Reproducible source and article media for an honest scheduler comparison. The repository keeps the product boundary explicit and uses real running components wherever a product UI is shown.
 
+[Open the live samples](https://benchmark.rv-grid.com/revogrid-scheduler-review-samples/).
+
 ![Live scheduler comparison](public/assets/live-comparison.png)
 
 ## Samples
@@ -33,9 +35,10 @@ The GIF and MP4 are cropped to the white scheduler stage for clean embedding in 
 
 ## Run locally
 
-Requirements: Node.js 20+, pnpm, and access to the RevoGrid Enterprise package. Bryntum's public Scheduler Pro trial alias is declared exactly as recommended by Bryntum.
+Requirements: Node.js 24.13.0, pnpm, and GitHub Packages access to the RevoGrid trial packages. Bryntum's public Scheduler Pro trial alias is declared exactly as recommended by Bryntum.
 
 ```bash
+export NODE_AUTH_TOKEN=YOUR_GITHUB_PACKAGES_TOKEN
 pnpm install
 pnpm dev
 ```
@@ -58,6 +61,12 @@ pnpm capture:proof
 
 `capture:proof` does not merely animate DOM elements. It drags the actual RevoGrid event, checks the accepted resource assignment, attempts the invalid blocked-time drop, and fails if the final controlled event state is not the expected rejected result.
 
+## Trial packages and Pages
+
+The public reproduction pins exact npm aliases to `@revolist/rv-pro-trial@2.4.0` and `@revolist/rv-enterprise-trial@2.4.0`; it does not install the main Pro or Enterprise distributions. The Pages workflow uses the repository `GITHUB_TOKEN` with `packages: read`. The repository must therefore have read access to both trial packages.
+
+Vite accepts `VITE_BASE_PATH` so the same build runs at the standard project Pages path and at the benchmark hub path. Trusted pushes to `main` deploy the standalone project site; the benchmark hub publishes the same build under `/revogrid-scheduler-review-samples/`.
+
 ## Licensing
 
-The sample source in this repository is MIT-licensed. RevoGrid Enterprise and Bryntum Scheduler Pro are commercial products governed by their respective licenses. No vendor package source or bundle is committed here; package dependencies are installed by the reader.
+The sample source in this repository is MIT-licensed. RevoGrid and Bryntum trial packages remain governed by their respective licenses. No vendor package source or bundle is committed here; package dependencies are installed by the reader or the Pages workflow.
