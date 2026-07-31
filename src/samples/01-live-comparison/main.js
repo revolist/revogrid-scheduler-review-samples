@@ -1,7 +1,7 @@
 import { defineCustomElements } from '@revolist/revogrid/loader';
 import { EventSchedulerPlugin } from '@revolist/revogrid-enterprise';
 import { SchedulerPro } from '@bryntum/schedulerpro';
-import '@revolist/revogrid-enterprise/dist/revogrid-enterprise.css';
+import '@revolist/revogrid-enterprise/dist/rv-enterprise-trial.css';
 import '@bryntum/schedulerpro/schedulerpro.css';
 import { availability, events, resources, toBryntumDate } from '../../shared/data.js';
 

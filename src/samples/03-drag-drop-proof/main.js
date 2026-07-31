@@ -1,6 +1,6 @@
 import { defineCustomElements } from '@revolist/revogrid/loader';
 import { EventSchedulerPlugin } from '@revolist/revogrid-enterprise';
-import '@revolist/revogrid-enterprise/dist/revogrid-enterprise.css';
+import '@revolist/revogrid-enterprise/dist/rv-enterprise-trial.css';
 
 defineCustomElements();
 
