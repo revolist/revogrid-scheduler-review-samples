@@ -1,0 +1,28 @@
+body { overflow: hidden; }
+.mapping-page { width: 1600px; height: 900px; padding: 68px 84px 52px; position: relative; overflow: hidden; background: radial-gradient(circle at 8% 0%, rgba(79,70,229,.07), transparent 26%), linear-gradient(180deg,#fbfcff,#f5f7fb); }
+.mapping-page::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.35; background-image:linear-gradient(rgba(37,48,74,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(37,48,74,.035) 1px,transparent 1px); background-size:48px 48px; }
+.mapping-page>* { position:relative; z-index:1; }
+.eyebrow { display:flex; align-items:center; gap:9px; }
+.eyebrow-dot { width:9px; height:9px; border-radius:50%; background:#4f46e5; box-shadow:0 0 0 5px rgba(79,70,229,.12); }
+.mapping-header h1 { margin:15px 0 10px; font-size:50px; line-height:1.05; letter-spacing:-.045em; color:#111827; }
+.mapping-header p { margin:0; color:#657089; font-size:19px; }
+.mapping-grid { display:grid; gap:18px; margin-top:48px; }
+.mapping-lane { min-height:190px; display:grid; grid-template-columns:65px 465px 1fr 480px; align-items:center; gap:22px; padding:25px 28px; background:rgba(255,255,255,.9); border:1px solid #dde3ee; border-radius:22px; box-shadow:0 12px 40px rgba(40,52,86,.06); }
+.lane-index { width:49px; height:49px; display:grid; place-items:center; border-radius:15px; background:#eef0ff; color:#4f46e5; font-weight:800; }
+.lane-kicker { margin:0 0 16px; color:#7b849a; font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.input-row { display:flex; gap:10px; flex-wrap:wrap; }
+.input-chip { padding:11px 16px; white-space:nowrap; background:#f8fafc; border:1px solid #d9dfeb; border-radius:999px; color:#35405a; font-weight:600; }
+.flow-line { height:2px; position:relative; background:linear-gradient(90deg,#cfd6e5,#a5afc4); }
+.flow-line span { position:absolute; right:-1px; top:-5px; width:12px; height:12px; border-top:2px solid #8791aa; border-right:2px solid #8791aa; transform:rotate(45deg); }
+.plugin-card { min-height:128px; display:flex; align-items:center; gap:18px; padding:23px; border:1px solid; border-radius:18px; }
+.scheduler-card { background:linear-gradient(135deg,#eeefff,#f7f6ff); border-color:#cbc9ff; }
+.gantt-card { background:linear-gradient(135deg,#eaf9f5,#f4fbf9); border-color:#bde7dc; }
+.plugin-mark { width:56px; height:56px; flex:0 0 auto; display:grid; place-items:center; border-radius:17px; color:#fff; font-size:24px; font-weight:800; box-shadow:0 10px 22px rgba(31,41,55,.14); }
+.scheduler-mark { background:#4f46e5; }.gantt-mark { background:#0f766e; }
+.plugin-owner { display:block; margin-bottom:5px; color:#707a91; font-size:12px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; }
+.plugin-card strong { display:block; color:#172033; font-size:20px; }.plugin-card p { margin:7px 0 0; color:#687389; font-size:13px; }
+.comparison-note { min-height:135px; display:flex; align-items:center; gap:20px; margin-top:22px; padding:24px 30px; background:#172033; border-radius:20px; color:#fff; box-shadow:0 18px 36px rgba(21,31,55,.14); }
+.note-icon { width:48px; height:48px; display:grid; place-items:center; border-radius:50%; background:#fb923c; color:#172033; font:800 22px Georgia,serif; }
+.note-label { display:block; margin-bottom:6px; color:#aeb8cc; font-size:11px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+.comparison-note strong { font-size:20px; }.comparison-note p { margin:7px 0 0; color:#c8d0df; font-size:14px; }
+.mapping-footer { display:flex; align-items:center; gap:18px; margin-top:22px; color:#747e92; font-size:13px; font-weight:600; }.footer-rule { width:48px; height:1px; background:#c5ccda; }
